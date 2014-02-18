@@ -6,6 +6,15 @@ var Iterators = (function() {
         action(arr[i]);
       }
       return arr;
+    },
+
+    map : function (arr, action) {
+      if (arr === null) return arr;
+      var new_arr = [];
+      Iterators.each(arr, function(i){
+        	new_arr.push(action(i));
+        });
+      return new_arr;
     }
   };
 })();
